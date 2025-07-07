@@ -1,0 +1,7 @@
+
+<!-- This file would contain the definition of loop detectors for the SUMO simulation. -->
+<!-- These detectors are used to gather traffic data during the simulation. -->
+<additional>
+    <!-- Detector definitions would go here -->
+</additional>
+

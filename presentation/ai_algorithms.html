@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #1a5276;
+        color: #ecf0f1;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+      .title {
+        color: #ffffff;
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 1;
+      }
+      .column {
+        width: 48%;
+        padding: 20px;
+      }
+      .section-title {
+        color: #3498db;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .algorithm-item {
+        margin-bottom: 25px;
+        display: flex;
+        align-items: flex-start;
+      }
+      .algorithm-icon {
+        color: #3498db;
+        margin-right: 15px;
+        font-size: 24px;
+        min-width: 24px;
+      }
+      .algorithm-text {
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      .algorithm-name {
+        font-weight: bold;
+        color: #ffffff;
+      }
+      .chart-container {
+        height: 300px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <h1 class="title">AI Algorithms</h1>
+      
+      <div class="content">
+        <div class="column">
+          <h2 class="section-title">Core AI Components</h2>
+          
+          <div class="algorithm-item">
+            <div class="algorithm-icon"><i class="fas fa-traffic-light"></i></div>
+            <div class="algorithm-text">
+              <span class="algorithm-name">Adaptive Signal Control:</span> Uses reinforcement learning to optimize traffic signal timing based on real-time traffic conditions, minimizing waiting times and maximizing throughput.
+            </div>
+          </div>
+          
+          <div class="algorithm-item">
+            <div class="algorithm-icon"><i class="fas fa-route"></i></div>
+            <div class="algorithm-text">
+              <span class="algorithm-name">Dynamic Routing:</span> Implements graph-based algorithms to calculate optimal routes considering current traffic density, incidents, and predicted congestion patterns.
+            </div>
+          </div>
+          
+          <div class="algorithm-item">
+            <div class="algorithm-icon"><i class="fas fa-car-crash"></i></div>
+            <div class="algorithm-text">
+              <span class="algorithm-name">Incident Detection:</span> Uses anomaly detection algorithms to identify traffic incidents, accidents, or unusual congestion patterns requiring intervention.
+            </div>
+          </div>
+          
+          <div class="algorithm-item">
+            <div class="algorithm-icon"><i class="fas fa-eye"></i></div>
+            <div class="algorithm-text">
+              <span class="algorithm-name">Computer Vision:</span> YOLOv5 model for vehicle detection, classification, and counting from camera feeds with 92% accuracy on the test dataset.
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <h2 class="section-title">Algorithm Performance</h2>
+          
+          <div class="chart-container">
+            <canvas id="algorithmPerformanceChart"></canvas>
+          </div>
+          
+          <div style="margin-top: 40px;">
+            <h2 class="section-title">Key Features</h2>
+            
+            <div class="algorithm-item">
+              <div class="algorithm-icon"><i class="fas fa-network-wired"></i></div>
+              <div class="algorithm-text">
+                <span class="algorithm-name">Distributed Intelligence:</span> Each intersection has local decision-making capability while coordinating with neighboring intersections.
+              </div>
+            </div>
+            
+            <div class="algorithm-item">
+              <div class="algorithm-icon"><i class="fas fa-clock"></i></div>
+              <div class="algorithm-text">
+                <span class="algorithm-name">Real-time Adaptation:</span> System responds to changing traffic conditions within 5 seconds, adjusting signal timing and routing recommendations.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // Algorithm Performance Chart
+      const ctx = document.getElementById('algorithmPerformanceChart').getContext('2d');
+      const algorithmPerformanceChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Adaptive Signal Control', 'Dynamic Routing', 'Incident Detection', 'Vehicle Classification'],
+          datasets: [{
+            label: 'Accuracy (%)',
+            data: [89, 82, 78, 92],
+            backgroundColor: '#3498db',
+            borderColor: '#2980b9',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              grid: {
+                color: 'rgba(255, 255, 255, 0.1)'
+              },
+              ticks: {
+                color: '#ecf0f1'
+              }
+            },
+            x: {
+              grid: {
+                color: 'rgba(255, 255, 255, 0.1)'
+              },
+              ticks: {
+                color: '#ecf0f1'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: '#ecf0f1'
+              }
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #1a5276;
+        color: #ecf0f1;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+      .title {
+        color: #ffffff;
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 1;
+      }
+      .column {
+        width: 48%;
+        padding: 20px;
+      }
+      .section-title {
+        color: #3498db;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .feature-item {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+      }
+      .feature-icon {
+        color: #3498db;
+        margin-right: 15px;
+        font-size: 24px;
+        min-width: 24px;
+      }
+      .feature-text {
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        margin-bottom: 20px;
+      }
+      .simulation-image {
+        max-width: 100%;
+        max-height: 400px;
+        border: 2px solid #3498db;
+        border-radius: 8px;
+      }
+      .code-block {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        padding: 15px;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        overflow: auto;
+        max-height: 200px;
+      }
+      .code-comment {
+        color: #3498db;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <h1 class="title">SUMO Simulation</h1>
+      
+      <div class="content">
+        <div class="column">
+          <h2 class="section-title">Simulation Environment</h2>
+          
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <div class="feature-text">
+              Network configuration based on a section of Nairobi city with 100+ intersections and 20+ routes.
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-car"></i></div>
+            <div class="feature-text">
+              Traffic demand modeling with varying vehicle types (cars, buses, trucks, emergency vehicles) and time-dependent flow patterns.
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-traffic-light"></i></div>
+            <div class="feature-text">
+              Traffic light control through TraCI (Traffic Control Interface) API for real-time signal adjustments.
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-route"></i></div>
+            <div class="feature-text">
+              Dynamic routing capabilities to adapt to changing traffic conditions and incidents.
+            </div>
+          </div>
+          
+          <h2 class="section-title" style="margin-top: 30px;">Key Components</h2>
+          <div class="code-block">
+<span class="code-comment"># SUMO configuration file (AI.sumocfg)</span>
+&lt;configuration&gt;
+    &lt;input&gt;
+        &lt;net-file value="nairobi.net.xml"/&gt;
+        &lt;route-files value="routes.rou.xml"/&gt;
+        &lt;additional-files value="detectors.add.xml"/&gt;
+    &lt;/input&gt;
+    &lt;time&gt;
+        &lt;begin value="0"/&gt;
+        &lt;end value="1000"/&gt;
+    &lt;/time&gt;
+&lt;/configuration&gt;
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="image-container">
+            <img src="https://www.eclipse.org/sumo/images/sumo-gui.png" alt="SUMO Simulation Interface" class="simulation-image">
+          </div>
+          
+          <h2 class="section-title">Data Collection & Analysis</h2>
+          
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-database"></i></div>
+            <div class="feature-text">
+              Vehicle trajectory data collection including position, speed, acceleration, and waiting times.
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="feature-text">
+              Traffic density analysis using induction loop detectors placed at strategic locations.
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-clock"></i></div>
+            <div class="feature-text">
+              Performance metrics tracking: average waiting time, travel time, queue length, and emissions.
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+            <div class="feature-text">
+              Real-time data exchange between SUMO and AI algorithms via Python scripts using TraCI.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #1a5276;
+        color: #ecf0f1;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+      .title {
+        color: #ffffff;
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 1;
+      }
+      .column {
+        width: 48%;
+        padding: 20px;
+      }
+      .section-title {
+        color: #3498db;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .layer-item {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+      }
+      .layer-number {
+        color: #3498db;
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 15px;
+        min-width: 30px;
+      }
+      .layer-text {
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      .layer-name {
+        font-weight: bold;
+        color: #ffffff;
+      }
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+      }
+      .architecture-image {
+        max-width: 100%;
+        max-height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <h1 class="title">System Architecture</h1>
+      
+      <div class="content">
+        <div class="column">
+          <h2 class="section-title">5-Layer Architecture</h2>
+          
+          <div class="layer-item">
+            <div class="layer-number">1</div>
+            <div class="layer-text">
+              <span class="layer-name">Sensor Layer:</span> Traffic cameras with YOLO object detection, loop detectors, and environmental sensors collect raw traffic data.
+            </div>
+          </div>
+          
+          <div class="layer-item">
+            <div class="layer-number">2</div>
+            <div class="layer-text">
+              <span class="layer-name">Data Layer:</span> Handles data collection, storage (locally on Raspberry Pi's SD card), and preprocessing for analysis.
+            </div>
+          </div>
+          
+          <div class="layer-item">
+            <div class="layer-number">3</div>
+            <div class="layer-text">
+              <span class="layer-name">AI Layer:</span> Core intelligence with traffic prediction models, signal timing optimization, dynamic routing, and incident detection.
+            </div>
+          </div>
+          
+          <div class="layer-item">
+            <div class="layer-number">4</div>
+            <div class="layer-text">
+              <span class="layer-name">Control Layer:</span> Implements decisions through adaptive traffic signals via Raspberry Pi and variable message signs.
+            </div>
+          </div>
+          
+          <div class="layer-item">
+            <div class="layer-number">5</div>
+            <div class="layer-text">
+              <span class="layer-name">Management Layer:</span> Provides centralized monitoring dashboard and integration with emergency services.
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="image-container">
+            <img src="/home/ubuntu/src/images/system_architecture.png" alt="System Architecture Diagram" class="architecture-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
