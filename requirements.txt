@@ -1,26 +1,10 @@
-
 pandas
 numpy
 requests
-
-
-
 opencv-python
-
-
-
 traci
 sumolib
-
-
-
-
-
-
 paho-mqtt
-
-
-
 matplotlib
 
 
