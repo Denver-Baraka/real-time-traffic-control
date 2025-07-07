@@ -121,7 +121,7 @@ To run the simulations and potentially set up the physical prototype, you will n
 We welcome contributions to this project! Please see `CONTRIBUTING.md` for guidelines on how to submit issues, feature requests, and pull requests.
 
 ## License
-This project is licensed under the [License Name] - see the `LICENSE` file for details.
+This project is licensed under the MIT - see the `LICENSE` file for details.
 
 ## Acknowledgements
 -   University of Nairobi, Faculty of Engineering, Department of Electrical and Information Engineering.
@@ -131,7 +131,7 @@ This project is licensed under the [License Name] - see the `LICENSE` file for d
 -   Ultralytics for the YOLOv5s model.
 
 ## Contact
-For any inquiries, please contact [your-email@example.com] (replace with your actual email address or a project contact email).
+For any inquiries, please contact denverbaraka@gmail.com 
 
 
 
