@@ -70,8 +70,6 @@ To run the simulations and potentially set up the physical prototype, you will n
     ```bash
     git clone https://github.com/your-username/real-time-traffic-signal-ai.git
     cd real-time-traffic-signal-ai
-    ```
-    *(Note: The original project repository is currently private. This is a placeholder for your public repository.)*
 
 2.  **Install Python dependencies:**
     ```bash
@@ -124,9 +122,6 @@ We welcome contributions to this project! Please see `CONTRIBUTING.md` for guide
 This project is licensed under the MIT - see the `LICENSE` file for details.
 
 ## Acknowledgements
--   University of Nairobi, Faculty of Engineering, Department of Electrical and Information Engineering.
--   Supervisor: Dr. Gevira Omondi.
--   Examiners: Prof H A Ouma, Mr K Wachira.
 -   The SUMO (Simulation of Urban MObility) team for providing a powerful simulation platform.
 -   Ultralytics for the YOLOv5s model.
 
